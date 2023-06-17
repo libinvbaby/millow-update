@@ -1,0 +1,240 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+
+}
+
+.banner-container{
+    width:100%;
+    height:100vh;
+    background-image:url(./images/background-check-first-banner.jpg);
+    background-size: cover;
+    opacity: 0;
+    animation: bannerContainerAnimation 1s forwards ease-in-out;
+}
+
+
+@keyframes bannerContainerAnimation{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.banner-left-side{
+    background-color: #800080;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0;
+    animation: bannerLeftSide 1s forwards;
+    animation-delay: 1s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+.overlay{
+    height:100vh;
+    width: 100%;
+    position:absolute;
+    background-color:#00000075;
+}
+
+@keyframes bannerLeftSide {
+    0%{
+        opacity: 0;
+        transform:translateX(-100%);
+            
+    }
+   100%{
+        opacity: 1;
+        transform:translateX(0%);
+            
+    }
+}
+
+.first-coloum{
+    background-color: #ac2aac;
+    height: 50vh;
+    opacity: 0;
+    animation: rightToLeftAnimation 1s forwards;
+    animation-delay: 1s;
+
+}
+.second-coloum{
+    background-color: #3d023d;
+    height: 50vh;
+    opacity: 0;
+    animation: rightToLeftAnimation 1s forwards;
+    animation-delay: 1s;
+
+
+}
+
+@keyframes rightToLeftAnimation {
+    0%{
+        opacity: 0;
+        transform: translateX(100%)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%)
+    }
+    
+}
+
+.shape-one{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+.shape-two{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+.shape-three{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+.shape-four{
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+.shape-five{
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+.shape-six{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    animation: animateBackground 10s linear  infinite;
+    opacity: 0;
+    animation-delay: 2s;
+
+}
+
+@keyframes animateBackground {
+    0% {
+        opacity: 1s;
+      transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+      transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+
+      transform: translateX(0%);
+    }
+  }
+
+  .banner-main-title {
+    font-size:70px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+
+  }
+
+ 
+  .banner-main-title:hover  {
+    transform: translateX(5px);
+    transform: scale(1.2);
+
+  }
+ 
+  .subsections{
+    position:absolute;
+    
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    opacity: 0;
+    background-color: #3d023d;
+    padding: 10px;
+    border-radius:20px;
+    transition: opacity 0.3s ease;
+    display: none;  
+}
+.menu{
+    z-index: 9999999999;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+}
+    .show{
+        display: block;
+  opacity: 1;
+  animation: titleSubSectionAnimation 1s forwards ;
+
+    }
+   
+ .hide{
+opacity: 0; }
+  @keyframes titleSubSectionAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+  }
+  .card{
+    width: 100%;
+    padding:10px 20px;
+    text-align: center;
+    margin:10px 0px;
+    background: rgb(128,0,128);
+background: linear-gradient(90deg, rgba(128,0,128,1) 0%, rgba(175,38,175,1) 100%);
+border-radius: 20px 0px;
+  }
+  .card h2{
+    font-size: 24px;
+    color: #fff;
+
+  }
